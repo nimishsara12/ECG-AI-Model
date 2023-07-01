@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://kit.fontawesome.com/f36de5d734.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<head>
+<title>Home</title>
+<style>
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  .nav1 {
+    height: 50px;
+    width: 100%;
+    background-color: #1a1053;
+    position: relative;
+  }
+  
+  .nav1 > .nav-header1 {
+    display: inline;
+  }
+  
+  .nav1 > .nav-header1 > .nav-title1 {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav1 > .nav-btn1 {
+    display: none;
+  }
+  
+  .nav1 > .nav-links1 {
+    display: inline;
+    float: right;
+    absolute:right;
+    right:40px;
+    font-size: 18px;
+  }
+  
+  .nav1 > .nav-links1 > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav1 > .nav-links1 > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav1 > #nav-check1 {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav1 > .nav-btn1 {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav1 > .nav-btn1 > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav1 > .nav-btn1 > label:hover,.nav1  #nav-check1:checked ~ .nav-btn1 > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav1 > .nav-btn1 > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav1 > .nav-links1 {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #0f0f0f;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav1 > .nav-links1 > a {
+      display: block;
+      width: 100%;
+    }
+    .nav1 > #nav-check1:not(:checked) ~ .nav-links1 {
+      height: 0px;
+    }
+    .nav1 > #nav-check1:checked ~ .nav-links1 {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+
+  /* CARDS CSS */
+
+  .card-img-top{
+    height:150px
+  
+  }
+  
+  .project-card-view {
+    box-shadow: 0 4px 5px 3px rgba(222, 128, 241, 0.459) !important;
+    color: black !important;
+    background-color: transparent !important;
+    opacity: 1.9 !important;
+    transition: all 0.5s ease 0s !important;
+    height: 100% !important;
+  }
+  .project-card-view:hover {
+    transform: scale(1.04) !important;
+    overflow: hidden !important;
+    box-shadow: 2px 9px 9px 9px rgba(163, 113, 179, 0.561) !important;
+  }
+
+  /* FOOTER */
+
+
+
+  .footer-clean {
+  padding:50px 0;
+  background-color:#fff;
+  color:#4b4c4d;
+}
+
+.footer-clean h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-clean ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-clean ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-clean ul a:hover {
+  opacity:1;
+}
+
+.footer-clean .item.social {
+  text-align:right;
+}
+
+@media (max-width:767px) {
+  .footer-clean .item {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-clean .item.social {
+    text-align:center;
+  }
+}
+
+.footer-clean .item.social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin-left:10px;
+  margin-top:22px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-clean .item.social > a:hover {
+  opacity:0.9;
+}
+
+@media (max-width:991px) {
+  .footer-clean .item.social > a {
+    margin-top:40px;
+  }
+}
+
+@media (max-width:767px) {
+  .footer-clean .item.social > a {
+    margin-top:10px;
+  }
+}
+
+.footer-clean .copyright {
+  margin-top:14px;
+  margin-bottom:0;
+  font-size:13px;
+  opacity:0.6;
+}
+
+
+
+</style>
+</head>
+<body>
+    <div class="nav1 sticky-top">
+      
+        <div class="nav-header1">
+          <div class="nav-title1"><i class="fa-solid fa-hand-holding-medical" ></i> FITCHECK</div>
+        </div>
+        <div class="nav-btn1">
+          <label for="nav-check1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links1">
+         
+         <!-- <a href="/upload" >Predict</a>
+         <a href="/info">Info</a>
+         <a href="/about">Home</a> -->
+
+         <a href="/" > <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style='margin-bottom: 2px'><path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"></path></svg> Home</a>
+        <a href="/info" ><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style='margin-bottom: 2px'><path d="M858.5 763.6a374 374 0 0 0-80.6-119.5 375.63 375.63 0 0 0-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 0 0-80.6 119.5A371.7 371.7 0 0 0 136 901.8a8 8 0 0 0 8 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 0 0 8-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z"></path></svg> Info</a>
+        <a href="/upload" ><svg stroke="currentColor" fill="currentColor" stroke-width="0" t="1569683753031" viewBox="0 0 1024 1024" version="1.1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style='margin-bottom: 2px'><defs></defs><path d="M312.1 591.5c3.1 3.1 8.2 3.1 11.3 0l101.8-101.8 86.1 86.2c3.1 3.1 8.2 3.1 11.3 0l226.3-226.5c3.1-3.1 3.1-8.2 0-11.3l-36.8-36.8c-3.1-3.1-8.2-3.1-11.3 0L517 485.3l-86.1-86.2c-3.1-3.1-8.2-3.1-11.3 0L275.3 543.4c-3.1 3.1-3.1 8.2 0 11.3l36.8 36.8z"></path><path d="M904 160H548V96c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H120c-17.7 0-32 14.3-32 32v520c0 17.7 14.3 32 32 32h356.4v32L311.6 884.1c-3.7 2.4-4.7 7.3-2.3 11l30.3 47.2v0.1c2.4 3.7 7.4 4.7 11.1 2.3L512 838.9l161.3 105.8c3.7 2.4 8.7 1.4 11.1-2.3v-0.1l30.3-47.2c2.4-3.7 1.3-8.6-2.3-11L548 776.3V744h356c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32z m-40 512H160V232h704v440z"></path></svg> Predict</a>
+        <a href="/flask/templates/contact.html" ><i class="fa-solid fa-phone" style='font-size: 15px'></i> Contact us</a>
+        </div>
+      </div>
+
+
+      <div id="home">
+        <div class="padding" style='padding: 50px 0 0 0'>
+        <section class="site-banner" >
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-lg-6 col-md-12 site-title my-5"
+                style='padding-top:70px'
+              >
+                <h1 style='color:red; font-size:3.5rem;text-align: center;'>Heart Attack </h1>
+                <h1 style='color:red; font-size:3.5rem;text-align: center; '>Prediction</h1>
+                <h5 class='my-2' style='color:#4D455D;margin:auto;text-align:center'>Know your disease,Save your life </h5>
+                
+                 <h5 style='color:#13005A;margin:auto;text-align:center'>  </h5>
+              </div>
+    
+              <div
+                class="col-lg-6 col-md-12 banner-image"
+                style='width:500px;justify-items:right'
+              >
+                
+                <img src="static\Screenshot (1344).png" alt="banner-img" class="img-fluid" style='background-color:transparent'/>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+      </div>
+
+    <div class="row">
+        <div class="col-lg-6" style="padding-left:50px">
+            <p style="font-size:18px" >According to the World Health Organization (WHO), cardiovascular diseases (CVDs) are the
+                number one cause of death today. Over 17.7 million people died from CVDs in the year 2017
+                all over the world which is about 31% of all deaths, and over 75% of these deaths occur in
+                low and middle income countries. Arrhythmia is a representative type of CVD that refers to
+                any irregular change from the normal heart rhythms. There are several types of arrhythmia
+                including atrial fibrillation, premature contraction, ventricular fibrillation, and tachycardia.
+                Although single arrhythmia heartbeat may not have a serious impact on life, continuous
+                arrhythmia beats can result in fatal circumstances.Electrocardiogram (ECG) is a non-invasive medical tool that displays the rhythm and status
+                of the heart. Therefore, automatic detection of irregular heart rhythms from ECG signals is a
+                significant task in the field of cardiology.
+                <!-- A heart arrhythmia (uh-RITH-me-uh) is an irregular heartbeat. Heart rhythm problems (heart arrhythmias) occur when the electrical signals that coordinate the heart's beats don't work properly. The faulty signaling causes the heart to beat too fast (tachycardia), too slow (bradycardia) or irregularly.
+                
+                Heart arrhythmias may feel like a fluttering or racing heart and may be harmless. However, some heart arrhythmias may cause bothersome — sometimes even life-threatening — signs and symptoms.
+                
+                However, sometimes it's normal for a person to have a fast or slow heart rate. For example, the heart rate may increase with exercise or slow down during sleep.
+                
+                Heart arrhythmia treatment may include medications, catheter procedures, implanted devices or surgery to control or eliminate fast, slow or irregular heartbeats. A heart-healthy lifestyle can help prevent heart damage that can trigger certain heart arrhythmias. -->
+                </p>
+        </div>
+        <div class="col-lg-6">
+            <img src="static\heart_arrhytmia.jpg" width:500px></img>
+        </div>
+    </div>
+
+
+
+
+
+
+
+  
+      <div id="all" style="padding-top:50px">
+     
+      <div class="row ">
+        
+        <div class="col-lg-6 " style='padding-top:15px'>
+          <center><h1 style='padding-left: 30px;color:#172d84' >How we can Help?</span> </h1></center>
+          <p style='font-size:18px;line-height:2;padding-left: 30px;'>We can help in many ways to save the life of an individual by 
+            giving them appropriate prediction about the heart attack,
+            so that they are aware that they need to go to doctor for their heart
+            check, we are also providing the precaution need to be taken to save
+            from the heart attack , if an individual follows our guidance then they
+            did not have any kind of heart problem. 
+          </p>
+        </div>
+
+        <div class="col-lg-6 " style='padding-top:20px'>
+
+          <center><img style='width:500px;object-fit:cover;border-radius:200px;
+          background:transparent;margin-left: 40px;justify-content: center;
+          margin: auto;' src='static\Screenshot (1342).png' alt="" /></center>
+        </div>
+      </div>
+      </div>
+
+
+
+
+      <div id="project">
+        <div class="padding">
+        <div id="project  " style='width:90%;margin:auto;padding-top:100px' >
+          <h1 class=" " style='text-align: center; font-size:40px'><span class="purple ">Precaution need to be taken to </span> </h1>
+          <h1  style='color:#E90064; text-align: center'>Save from Heart Attack</h1>
+          
+            
+    
+          <div class="row "  style='margin:auto;justify-content: center'>
+            <div class="col-lg-4 col-md-12 about-title my-5 ">
+              <div class="card project-card-view " style='width:18rem;margin:auto'>
+                <img src="static\Screenshot (1337).png" class="card-img-top" alt="..." style='height:12rem' />
+              <div class="card-body">
+              <h5 class="card-title">Quit Smoking</h5>
+                <p class="card-text">
+                Smoking is one of the most significant risk factors for heart disease.
+                Quitting smoking can reduce your risk of heart attack and other cardiovascular diseases.
+                  
+                </p>
+                
+               
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-12 about-title my-5 ">
+            <div class="card project-card-view " style='width:18rem;margin:auto'>
+              <img src="static\Screenshot (1338).png" class="card-img-top" alt="..." style='height:12rem' />
+              <div class="card-body">
+              <h5 class="card-title">Eat a healthy diet</h5>
+                <p class="card-text">
+                  
+                A diet that is low in saturated and trans fats, cholesterol, salt, and added sugars can help reduce your risk of heart disease. Eating plenty of fruits, vegetables, 
+         whole grains, and lean proteins can help improve your heart health.
+    
+                </p>
+                
+                
+                
+              </div>
+            </div>
+          </div>
+    
+    
+          <div class="col-lg-4 col-md-12 about-title my-5 ">
+            <div class="card project-card-view " style='width:18rem;margin:auto'>
+              <img src="static\flay-lay-scale-weights.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+              <h5 class="card-title">Maintain a healthy weight</h5>
+                <p class="card-text">
+                Being overweight or obese can increase your risk of heart disease.
+          Maintaining a healthy weight through a healthy diet and regular exercise can help reduce your risk of heart attack.
+                
+                </p>
+                
+              
+              </div>
+            </div>
+          </div>
+    
+        </div>
+    
+        <div class="row " style='margin: auto;justify-content: center'>
+          <div class="col-lg-4 col-md-12 about-title my-5  ">
+            <div class="card project-card-view " style='width:18rem;margin: auto'>
+              <img src="static\Screenshot (1339).png" class="card-img-top" alt="..." />
+              <div class="card-body">
+              <h5 class="card-title">Exercise regularly</h5>
+                <p class="card-text">
+                Regular physical activity can help improve your heart health and reduce your risk of heart attack. 
+          for at least 150 minutes of moderate-intensity exercise or 75 minutes of vigorous-intensity exercise per week.
+                </p>
+               
+                
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-12 about-title my-5">
+            <div class="card project-card-view " style='width:18rem;margin:auto'>
+              <img src="static\Screenshot (1340).png" class="card-img-top" alt="..." />
+              <div class="card-body">
+              <h5 class="card-title">Manage stress</h5>
+                <p class="card-text">
+                Chronic stress can increase your risk of heart disease. 
+         Practicing relaxation techniques such as meditation, deep breathing, and yoga can help reduce stress and improve heart health
+                </p>
+                
+              
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4  about-title my-5">
+            <div class="card project-card-view " style='width:18rem;margin: auto'>
+              <img src="static\Screenshot (1341).png" class="card-img-top" alt="..." />
+              <div class="card-body">
+              <h5 class="card-title">Underlying health conditions</h5>
+                <p class="card-text">
+                If you have underlying health conditions such as high blood pressure, high cholesterol, or diabetes, 
+         it is important to manage these conditions effectively to reduce your risk of heart disease.
+                </p>
+               
+                
+              </div>
+            </div>
+          </div>
+        </div>
+    
+          
+        </div>
+      </div>
+    
+    </div>
+
+
+    <!-- FOOTER -->
+
+      
+  </div>
+  <div class="footer-clean">
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Disease</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">AI</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Model</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Legacy</a></li>
+                    </ul>
+                </div>
+          
+                <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                    <p class="copyright">Company Name © 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</div>
+</body>
+</html>
